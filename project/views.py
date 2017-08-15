@@ -5,8 +5,8 @@ from flask import Flask, flash, redirect, render_template,\
     request, session, url_for
 
 # config
-app = Flask.config(__name__)
-app.cofig.from_object('_config')
+app = Flask(__name__)
+app.config.from_object('_config')
 
 # helper functions
 
