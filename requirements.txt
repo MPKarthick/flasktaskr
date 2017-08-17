@@ -6,6 +6,7 @@ click==6.7
 constantly==15.1.0
 cycler==0.10.0
 Flask==0.11.1
+Flask-WTF==0.12
 hyperlink==17.3.0
 idna==2.5
 incremental==17.5.0
@@ -28,5 +29,6 @@ six==1.10.0
 urllib3==1.21.1
 virtualenv==15.1.0
 Werkzeug==0.12.2
+WTForms==2.1
 yolk==0.4.3
 zope.interface==4.4.2
