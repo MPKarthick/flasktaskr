@@ -75,7 +75,9 @@ def new_task():
             )
             db.session.add(new_task)
             db.session.commit()
-        flash('New entry was posted successfully. Thanks...!')
+            flash('New entry was posted successfully. Thanks...!')
+        else:
+            flash('Field entered is invalid...!')
     return redirect(url_for('tasks'))
 
 # Mark task as complete
