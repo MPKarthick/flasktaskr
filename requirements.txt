@@ -6,6 +6,7 @@ click==6.7
 constantly==15.1.0
 cycler==0.10.0
 Flask==0.11.1
+Flask-SQLAlchemy==2.1
 Flask-WTF==0.12
 hyperlink==17.3.0
 idna==2.5
@@ -26,6 +27,7 @@ python-dateutil==2.6.1
 pytz==2017.2
 requests==2.18.1
 six==1.10.0
+SQLAlchemy==1.1.13
 urllib3==1.21.1
 virtualenv==15.1.0
 Werkzeug==0.12.2
