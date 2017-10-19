@@ -1,8 +1,9 @@
-from project.views import db
+from views import db
 import datetime
 
 class Task(db.Model):
     __tablename__ = "tasks"
+    # __table_args__ = {'extend_existing': True}
 
     # any field which is set ti primary key will auto-update
     task_id = db.Column(db.Integer,	primary_key=True)
@@ -26,6 +27,7 @@ class Task(db.Model):
 
 class User(db.Model):
     __tablename__ = "users"
+    # __table_args__ = {'extend_existing': True}
 
     id = db.Column(db.Integer,	primary_key=True)
     name = db.Column(db.String,unique = True, nullable=False)

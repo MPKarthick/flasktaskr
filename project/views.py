@@ -1,7 +1,7 @@
 from functools import wraps
 from flask import Flask, flash, redirect, render_template,\
     request, session, url_for
-from project.forms import AddTaskForm, RegisterForm, LoginForm
+from forms import AddTaskForm, RegisterForm, LoginForm
 from flask_sqlalchemy import SQLAlchemy
 import datetime
 from sqlalchemy.exc import IntegrityError
@@ -11,7 +11,7 @@ app = Flask(__name__)
 app.config.from_object('_config')
 db = SQLAlchemy(app)
 
-from project.models import Task, User
+from models import Task, User
 
 # helper functions
 
@@ -27,6 +27,7 @@ def login_required(test):
 
 # route handlers
 @app.route('/logout/')
+@login_required
 def logout():
     session.pop('logged_in',None)
     session.pop('user_id',None)
