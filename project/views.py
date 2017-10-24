@@ -51,6 +51,7 @@ def login():
                 error = 'Invalid Username or Password'
         else:
             error = 'Both fields are required'
+            # error = 'Please login to access your task list'
     return render_template('login.html',form=form,error=error)
 
 @app.route('/tasks/')
