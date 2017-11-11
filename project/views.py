@@ -136,7 +136,6 @@ def flash_errors(form):
         for error in errors:
             flash(u"Error in the field - %s"%(getattr(form, field).label.text, error), 'error')
 
-
 def open_tasks():
     return db.session.query(Task).filter_by(status='1').order_by(Task.due_date.asc())
 
